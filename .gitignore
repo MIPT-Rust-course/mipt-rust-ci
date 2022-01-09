@@ -3,3 +3,6 @@
 
 # MacOS useless DS_Store
 **/.DS_Store
+
+# Private token
+**/token.json
