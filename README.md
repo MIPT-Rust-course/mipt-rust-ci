@@ -1,3 +1,3 @@
 # Scripts for CI
 
-Here are located scripts for GitHUb Actions CI.
+Here are located scripts for GitHub Actions CI.
