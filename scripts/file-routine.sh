@@ -6,7 +6,7 @@ then
     exit 1
 fi
 
-if [[ $PROBLEM_NAME =~ ^[a-z\-]+\/[a-z\-]+$ ]];
+if [[ "$PROBLEM_NAME" =~ ^[a-z\-]+\/[a-z\-]+$ ]];
 then
     echo "[INFO]   This branch/problem name passes"
 else

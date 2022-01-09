@@ -6,8 +6,11 @@ then
     exit 1
 fi
 
-echo "[INFO]   Installing cargo criterion"
-cargo install cargo-criterion || exit 1
-echo "[INFO]   Installing cargo criterion success"
+if [[ "$PROBLEM_NAME" =~ ^()$ ]];
+then
+    echo "[INFO]   Installing cargo criterion"
+    cargo install cargo-criterion || exit 1
+    echo "[INFO]   Installing cargo criterion success"
+fi
 
 echo "[INFO]   Setup returned no errors"
