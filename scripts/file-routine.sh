@@ -39,12 +39,12 @@ fi
 
 echo "[INFO]   Successfully moved solutions to course repository"
 
-LINE_WITH_FORBID="#![forbid(unsafe_code)];"
+LINE_WITH_FORBID="#![forbid(unsafe_code)]"
 echo "[INFO]   Checking for '$LINE_WITH_FORBID' at the beginning"
 
 cat "$PROBLEM_ROOT/.allowlist" | while read file
 do
-    if [ "$(head -n1 $PROBLEM_SOLUTION/$file)" = "$LINE_WITH_FORBID" ];
+    if [ "$(head -n1 $PROBLEM_SOLUTION/$file)" != "$LINE_WITH_FORBID" ];
     then
         echo "[ERROR]  No '$LINE_WITH_FORBID' line in file '$file'"
         exit 1
