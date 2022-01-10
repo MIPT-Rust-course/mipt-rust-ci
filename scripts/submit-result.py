@@ -10,7 +10,7 @@ from oauth2client.service_account import ServiceAccountCredentials as Credential
 SCOPE = ['https://www.googleapis.com/auth/drive']
 TOKEN = 'token.json'
 SPREADSHEET_TITLE = ENV['GSHEET_SPREADSHEET_TITLE']
-SPREADSHEET_INSTANCE = ENV['GSHEET_SPREADSHEET_INSTANCE']
+SPREADSHEET_INSTANCE = int(ENV['GSHEET_SPREADSHEET_INSTANCE'])
 PROBLEM_NAME = ENV['PROBLEM_NAME']
 USER_LOGIN = ENV['USER_LOGIN']
 TIMEZONE = pytz.timezone('Europe/Moscow')
