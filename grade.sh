@@ -9,6 +9,6 @@ echo "[INFO]   USER_LOGIN=\"$USER_LOGIN\""
 ./ci/scripts/setup-deps.sh || exit 1
 ./ci/scripts/test-solution.sh || exit 1
 
-pip install gspread oauth2client || exit 1
+pip install pytz gspread oauth2client || exit 1
 echo "$GSHEET_API_TOKEN" > ci/scripts/token.json || exit 1
 ./ci/scripts/submit-result.py || exit 1
